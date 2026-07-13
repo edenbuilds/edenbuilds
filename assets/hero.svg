@@ -1,34 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Eden  systems underneath hard problems">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Eden builds systems underneath hard problems">
   <defs>
     <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#070809"/>
-      <stop offset="55%" stop-color="#0c1014"/>
-      <stop offset="100%" stop-color="#0a1210"/>
+      <stop offset="0%" stop-color="#050607"/>
+      <stop offset="48%" stop-color="#0a0f0d"/>
+      <stop offset="100%" stop-color="#071210"/>
     </linearGradient>
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
-      <stop offset="35%" stop-color="#10b981" stop-opacity="0.55"/>
-      <stop offset="65%" stop-color="#d6d3cd" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#d6d3cd" stop-opacity="0"/>
+      <stop offset="28%" stop-color="#10b981" stop-opacity="0.7"/>
+      <stop offset="72%" stop-color="#e8e4dc" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#e8e4dc" stop-opacity="0"/>
     </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="32%" r="42%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <rect width="1200" height="360" fill="url(#wash)"/>
+  <rect width="1200" height="420" fill="url(#wash)"/>
+  <rect width="1200" height="420" fill="url(#glow)"/>
 
-  <!-- faint architectural grid -->
-  <g stroke="#1a2228" stroke-width="1" opacity="0.55">
-    <path d="M80 0 V360 M160 0 V360 M240 0 V360 M320 0 V360 M400 0 V360 M480 0 V360 M560 0 V360 M640 0 V360 M720 0 V360 M800 0 V360 M880 0 V360 M960 0 V360 M1040 0 V360 M1120 0 V360"/>
-    <path d="M0 72 H1200 M0 144 H1200 M0 216 H1200 M0 288 H1200"/>
+  <g stroke="#16201c" stroke-width="1" opacity="0.7">
+    <path d="M0 84 H1200 M0 168 H1200 M0 252 H1200 M0 336 H1200"/>
+    <path d="M96 0 V420 M192 0 V420 M288 0 V420 M384 0 V420 M480 0 V420 M576 0 V420 M672 0 V420 M768 0 V420 M864 0 V420 M960 0 V420 M1056 0 V420"/>
   </g>
 
-  <!-- accent mark -->
-  <rect x="96" y="118" width="3" height="54" fill="#10b981"/>
+  <!-- monogram -->
+  <rect x="96" y="108" width="56" height="56" rx="4" fill="#0c1512" stroke="#1f2e28" stroke-width="1"/>
+  <path d="M114 148 V124 H130 C138 124 142 128 142 134 C142 140 138 144 130 144 H114 Z M122 138 H129 C132 138 134 137 134 134 C134 131 132 130 129 130 H122 Z" fill="#10b981"/>
+  <path d="M136 148 L148 124 H156 L144 148 Z" fill="#e8e4dc" opacity="0.9"/>
 
-  <text x="120" y="148" fill="#f4f1ea" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="600" letter-spacing="14">EDEN</text>
-  <text x="120" y="188" fill="#8b949e" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="4.5">FOUNDER · OPERATOR · SYSTEMS</text>
+  <text x="172" y="138" fill="#f5f2ea" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="42" font-weight="650" letter-spacing="10">EDEN</text>
+  <text x="174" y="164" fill="#8b949e" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" letter-spacing="3.8">FOUNDER OPERATOR · SYSTEMS BUILDER</text>
 
-  <rect x="96" y="230" width="420" height="1" fill="url(#rule)"/>
+  <rect x="96" y="214" width="520" height="1" fill="url(#rule)"/>
 
-  <text x="120" y="268" fill="#d6d3cd" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" letter-spacing="0.8">Systems underneath hard problems.</text>
-  <text x="120" y="296" fill="#6e7681" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="0.4">Infrastructure · Legal tech · AI routing · Native software · Local-first</text>
+  <text x="96" y="268" fill="#e8e4dc" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="0.2">Systems underneath hard problems.</text>
+  <text x="96" y="302" fill="#6e7681" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" letter-spacing="0.3">Legal infrastructure · AI routing · Native software · Local-first systems</text>
+
+  <g transform="translate(860 120)">
+    <rect x="0" y="0" width="220" height="180" rx="6" fill="#0c1512" stroke="#1a2822" stroke-width="1"/>
+    <text x="20" y="36" fill="#6e7681" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="1.5">OPERATING MEMO</text>
+    <text x="20" y="68" fill="#f5f2ea" font-family="ui-sans-serif, system-ui, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Build substrate</text>
+    <text x="20" y="92" fill="#8b949e" font-family="ui-sans-serif, system-ui, Helvetica, Arial, sans-serif" font-size="12">Route · memory · approvals</text>
+    <text x="20" y="122" fill="#f5f2ea" font-family="ui-sans-serif, system-ui, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Keep authority explicit</text>
+    <text x="20" y="146" fill="#8b949e" font-family="ui-sans-serif, system-ui, Helvetica, Arial, sans-serif" font-size="12">Budgets · ledgers · kill switches</text>
+    <rect x="20" y="164" width="48" height="2" fill="#10b981"/>
+  </g>
 </svg>
