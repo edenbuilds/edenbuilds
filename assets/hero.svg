@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Eden  systems underneath hard problems">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070809"/>
+      <stop offset="55%" stop-color="#0c1014"/>
+      <stop offset="100%" stop-color="#0a1210"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#10b981" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#d6d3cd" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d6d3cd" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#wash)"/>
+
+  <!-- faint architectural grid -->
+  <g stroke="#1a2228" stroke-width="1" opacity="0.55">
+    <path d="M80 0 V360 M160 0 V360 M240 0 V360 M320 0 V360 M400 0 V360 M480 0 V360 M560 0 V360 M640 0 V360 M720 0 V360 M800 0 V360 M880 0 V360 M960 0 V360 M1040 0 V360 M1120 0 V360"/>
+    <path d="M0 72 H1200 M0 144 H1200 M0 216 H1200 M0 288 H1200"/>
+  </g>
+
+  <!-- accent mark -->
+  <rect x="96" y="118" width="3" height="54" fill="#10b981"/>
+
+  <text x="120" y="148" fill="#f4f1ea" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="600" letter-spacing="14">EDEN</text>
+  <text x="120" y="188" fill="#8b949e" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="4.5">FOUNDER · OPERATOR · SYSTEMS</text>
+
+  <rect x="96" y="230" width="420" height="1" fill="url(#rule)"/>
+
+  <text x="120" y="268" fill="#d6d3cd" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" letter-spacing="0.8">Systems underneath hard problems.</text>
+  <text x="120" y="296" fill="#6e7681" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="0.4">Infrastructure · Legal tech · AI routing · Native software · Local-first</text>
+</svg>
