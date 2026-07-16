@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" fill="none">
+  <rect width="1200" height="420" rx="32" fill="#050607"/>
+  <path d="M0 292C132 216 236 207 336 236C418 260 498 264 598 220C712 170 830 108 968 128C1077 144 1139 193 1200 246V420H0V292Z" fill="url(#g)"/>
+  <path d="M112 260C158 162 220 120 304 120C388 120 446 160 482 237C522 323 599 362 702 362C810 362 892 309 946 224" stroke="#f5f2ea" stroke-width="12" stroke-linecap="round"/>
+  <text x="88" y="120" fill="#f5f2ea" font-size="72" font-family="Inter, system-ui, sans-serif" font-weight="700">Greyhound</text>
+  <text x="88" y="170" fill="#8b949e" font-size="28" font-family="Inter, system-ui, sans-serif">Platform audit, remediation, compliance, and prompt uplift</text>
+  <defs>
+    <linearGradient id="g" x1="0" y1="420" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0c1512"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+</svg>
