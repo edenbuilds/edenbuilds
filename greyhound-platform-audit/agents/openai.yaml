@@ -4,5 +4,4 @@ interface:
   icon_small: "./assets/greyhound-mark.svg"
   icon_large: "./assets/greyhound-hero.svg"
   brand_color: "#10b981"
-  default_prompt: "Use $greyhound-platform-audit to audit this platform end-to-end, then rewrite the best prompts, instructions, and fixes."
-
+  default_prompt: "Use $greyhound-audit to audit this platform end-to-end, then rewrite the best prompts, instructions, fixes, and policy docs."

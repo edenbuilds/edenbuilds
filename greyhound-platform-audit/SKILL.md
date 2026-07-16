@@ -1,6 +1,6 @@
 ---
 name: greyhound-platform-audit
-description: Use when the user asks to audit, crawl, test, secure, improve, or prompt-upgrade any platform, including Lovable, Framer, webapps, dashboards, AI/agent systems, Tauri apps, and monorepos. Orchestrates Greyhound's browser, UI/UX, performance, security, compliance, de-slop, and remediation subskills.
+description: Use when the user asks to audit, crawl, test, secure, improve, or prompt-upgrade any platform, including Lovable, Framer, webapps, dashboards, AI/agent systems, Tauri apps, and monorepos. Orchestrates Greyhound's browser, UI/UX, performance, security, compliance, de-slop, policy-doc, and remediation subskills.
 ---
 
 # Greyhound Platform Audit
@@ -48,8 +48,10 @@ Use it when the task spans any of:
 - Framer-specific review and fixes: [`greyhound-framer-specialist`](./greyhound-framer-specialist/SKILL.md)
 - GDPR and privacy compliance: [`greyhound-gdpr`](./greyhound-gdpr/SKILL.md)
 - DPDP and India privacy compliance: [`greyhound-dpdp`](./greyhound-dpdp/SKILL.md)
+- Compliance matrix and enterprise controls: [`greyhound-compliance-suite`](./greyhound-compliance-suite/SKILL.md)
 - Humanize and de-slop rewrite layer: [`greyhound-humanize-deslop`](./greyhound-humanize-deslop/SKILL.md)
 - Prompt and instruction uplift: [`greyhound-prompt-upgrade`](./greyhound-prompt-upgrade/SKILL.md)
+- Privacy policy, T&C, and cookie docs: [`greyhound-privacy-docs`](./greyhound-privacy-docs/SKILL.md)
 - Fix planning and re-audit loop: [`greyhound-remediation-loop`](./greyhound-remediation-loop/SKILL.md)
 
 ## When To Use The References
@@ -60,6 +62,7 @@ Use it when the task spans any of:
 - Example workflow: [`references/workflows.md`](./references/workflows.md)
 - Extensibility templates: [`references/extensibility.md`](./references/extensibility.md)
 - Prompt upgrade rules: [`references/prompt-upgrade.md`](./references/prompt-upgrade.md)
+- Policy generation rules: [`references/policy-docs.md`](./references/policy-docs.md)
 - Validation plan: [`references/validation.md`](./references/validation.md)
 
 ## Response Shape
@@ -87,4 +90,10 @@ Every Greyhound run should also improve the product's own instructions when usef
 - Tighten flows and guardrails
 - Strip slop from UX copy and operator instructions
 - Suggest better slash commands, templates, and helper prompts
+
+## Names And Aliases
+
+- Primary pack: `greyhound-audit`
+- Short alias: `greyhound`
+- Folder name kept for compatibility: `greyhound-platform-audit`
 
