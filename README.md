@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/hero.svg" alt="Eden: systems underneath hard problems" width="100%" />
+  <img src="./assets/hero-animated.svg" alt="Eden: systems underneath hard problems" width="100%" />
 </div>
 
 <br />
@@ -226,6 +226,26 @@ A strategic map. Not a repository tour.
 │ Operating mode   │  Build · operate · refine                  │
 └──────────────────┴────────────────────────────────────────────┘
 ```
+
+---
+
+## Telemetry
+
+<div align="center">
+
+<img
+  src="https://streak-stats.demolab.com?user=edenbuilds&hide_border=true&background=050607&stroke=1c2620&ring=10b981&fire=10b981&currStreakLabel=10b981&sideLabels=8b949e&currStreakNum=f5f2ea&sideNums=e8e4dc&dates=6e7681"
+  alt="Commit streak" height="170" />
+
+<br /><br />
+
+<img
+  src="https://github-readme-activity-graph.vercel.app/graph?username=edenbuilds&theme=github-compact&bg_color=050607&color=e8e4dc&line=10b981&point=f5f2ea&area=true&area_color=10b981&hide_border=true&custom_title=Commit%20activity"
+  alt="Commit activity over time" width="100%" />
+
+</div>
+
+<sub>Cards render live from the GitHub API. <code>github-readme-stats</code> is deliberately not used here: its public instance rate limits to 503 for long stretches, and a broken image is worse than one fewer card.</sub>
 
 ---
 
