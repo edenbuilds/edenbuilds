@@ -5,149 +5,91 @@
 <br />
 
 <p align="center">
-  <img src="https://img.shields.io/badge/role-founder%20operator-0a0f0d?style=flat-square&labelColor=050607&color=10b981" alt="Founder operator" />
+  <img src="https://img.shields.io/badge/role-founder%20operator-2a2118?style=flat-square&labelColor=faf8f4&color=b65c28" alt="Founder operator" />
   &nbsp;
-  <img src="https://img.shields.io/badge/focus-substrate%20systems-0a0f0d?style=flat-square&labelColor=050607&color=8b949e" alt="Substrate systems" />
+  <img src="https://img.shields.io/badge/focus-agents%20%2B%20LegalTech-2a2118?style=flat-square&labelColor=faf8f4&color=6b5b4a" alt="Agents and LegalTech" />
   &nbsp;
-  <img src="https://img.shields.io/badge/mode-build%20%2F%20operate%20%2F%20refine-0a0f0d?style=flat-square&labelColor=050607&color=e8e4dc" alt="Build operate refine" />
+  <img src="https://img.shields.io/badge/mode-build%20%2F%20operate%20%2F%20refine-2a2118?style=flat-square&labelColor=faf8f4&color=e8e0d4" alt="Build operate refine" />
 </p>
 
 ---
 
-## Positioning
+## What I do
 
-I build the layers most products never finish: routing, memory, approvals, persistence, and the control surfaces that keep autonomous systems accountable.
+I build the reliable layers for **AI agents** and **legal teams**: memory, approvals, routing, and control.
 
-The work sits under hard problems. Chambers that need matter memory. Agents that need budgets and kill switches. Models that need governed routing. Devices that should keep private computation local.
+In plain language:
 
-The story is not shipping clever demos. It is designing systems that hold when the operational reality gets messy.
+- Agents that can act need budgets, logs, and a human approval path
+- Chambers need matter memory and hearing workflows that match real court rhythm
+- Private tools (camera, clipboard, documents) should stay on the machine by default
+
+The story is not clever demos. It is systems that still make sense when operations get messy.
 
 ---
 
-## Domains
+## Who this is for
 
-| Domain | Mandate |
+| If you are… | You probably need… |
 | :--- | :--- |
-| **Legal infrastructure** | Case operations, cause-list intelligence, drafting systems, and matter memory for Indian practice |
-| **AI control planes** | Multi-provider routing, approval loops, agent runtimes, and operator dashboards |
-| **Native and local-first** | macOS utilities and on-device interfaces where data and inference stay on the machine |
-| **Founder operating systems** | Private OS layers for projects, research, execution state, and agent orchestration |
-| **Brand and content systems** | Extraction, tokens, and generation pipelines that keep design output governed |
+| Running AI coding agents | A plan-and-check harness, not another chat window |
+| Operating a chambers | Matter, hearing, and diary tools that fit Indian practice |
+| Building private interfaces | On-device defaults so sensitive data does not leave |
+| Evaluating agent infrastructure | Approvals, budgets, and reconstructable logs |
 
 ---
 
-## Stack
+## Selected systems
 
-Tools are chosen for control, portability, and production discipline. Not fashion.
+Public proof. Open the repos.
 
-### Languages and runtimes
+### For coding agents
 
-<p align="center">
-  <img src="./assets/stack/typescript.svg" height="36" alt="TypeScript" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/python.svg" height="36" alt="Python" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/swift.svg" height="36" alt="Swift" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/rust.svg" height="36" alt="Rust" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/react.svg" height="36" alt="React" />
-</p>
+| System | What it does |
+| :--- | :--- |
+| **[agentloop](https://github.com/edenbuilds/agentloop)** | Helps coding agents plan, check, and finish safely across Cursor, Claude, Codex, Copilot, and Windsurf |
+| **[blackbox](https://github.com/edenbuilds/blackbox)** | Flight recorder for AI coding tools — turns messy transcripts into a searchable event log |
 
-| Layer | Stack | Why |
-| :--- | :--- | :--- |
-| Application | TypeScript, React, Next.js, Vite | Typed product surfaces with fast iteration and clean deploy paths |
-| Services | Python, FastAPI | Agent tooling, MCP servers, legal pipelines, CLI-heavy systems |
-| Native | Swift, Rust, Tauri | macOS-first utilities and lightweight desktop shells without Electron weight |
-| Contracts | Zod, SQLAlchemy, Alembic | Schema truth at the boundary: APIs, docs, and migrations stay honest |
+<!-- signal:start -->
+_Signal will append curated recognition here when evidence clears the bar._
+<!-- signal:end -->
 
-### Product and design systems
+### For Indian legal work
 
-<p align="center">
-  <img src="./assets/stack/nextjs.svg" height="34" alt="Next.js" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/vite.svg" height="34" alt="Vite" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/framer.svg" height="34" alt="Framer" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/zod.svg" height="34" alt="Zod" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/pnpm.svg" height="34" alt="pnpm" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/turborepo.svg" height="34" alt="Turborepo" />
-</p>
+| System | What it does |
+| :--- | :--- |
+| **[arya-ai](https://github.com/edenbuilds/arya-ai)** | Specialist helpers for Indian law — drafting protocols and verification before anything goes out |
+| **[chambers-of-shb](https://github.com/edenbuilds/chambers-of-shb)** | Day-to-day chambers software: matters, hearings, deadlines, diary |
+| **SHB Case Manager** | Chambers OS with dual Sheets/Supabase backends for operators who already live in spreadsheets |
+| **Optimist Prime** | Telegram-first legal assistant: cause lists, document memory, drafting, budgeted AI |
 
-| Concern | Tools | Role |
-| :--- | :--- | :--- |
-| Web products | Next.js 15, React 19, Tailwind, shadcn/ui | Operator dashboards and internal systems with sharp density |
-| Plugins | Framer Plugin API, Stylekit, BrandFrames | Brand extraction and governed content generation inside design surfaces |
-| Monorepos | pnpm, Turborepo | Shared schema/renderer packages without losing package boundaries |
-| Validation | Zod | Layout docs, BrandKits, and API payloads as typed contracts |
+### For private interfaces
 
-### Infrastructure and data
+| System | What it does |
+| :--- | :--- |
+| **[bloom](https://github.com/edenbuilds/bloom)** | Raise your hand to open Bloom — gesture UI runs on-device; camera never leaves the machine |
+| **klyppr** | Native macOS clipboard system: offline cleaning, local history, zero telemetry |
 
-<p align="center">
-  <img src="./assets/stack/supabase.svg" height="34" alt="Supabase" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/postgresql.svg" height="34" alt="PostgreSQL" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/cloudflare.svg" height="34" alt="Cloudflare" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/vercel.svg" height="34" alt="Vercel" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/railway.svg" height="34" alt="Railway" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/render.svg" height="34" alt="Render" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/docker.svg" height="34" alt="Docker" />
-</p>
+### Operating layer
 
-| Concern | Tools | Role |
-| :--- | :--- | :--- |
-| Data plane | Supabase, PostgreSQL, Google Sheets adapters | Production stores with dual-backend readiness where operators need it |
-| Edge and proxy | Cloudflare Workers | Auth, cheapest-route selection, and provider proxying at the edge |
-| Deploy | Vercel, Railway, Render, Fly.io | Product surfaces, long-running bots, and volume-backed services |
-| Isolation | Docker, git worktrees | Agent validation in clean environments without contaminating the main line |
+| System | What it does |
+| :--- | :--- |
+| **[signal](https://github.com/edenbuilds/signal)** | Selective GitHub intelligence + public operator surface for edenbuilds |
+| **Klint** | Multi-provider AI gateway with spend governance |
+| **AgentDock** | Messaging-first agent command center |
+| **Stylekit / BrandFrames** | Brand extraction and governed content generation in Framer |
 
-### AI routing and agent orchestration
+---
 
-<p align="center">
-  <img src="./assets/stack/claude.svg" height="34" alt="Claude" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/openai.svg" height="34" alt="OpenAI" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/anthropic.svg" height="34" alt="Anthropic" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/mcp.svg" height="34" alt="MCP" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/telegram.svg" height="34" alt="Telegram" />
-</p>
+## How I choose tools
 
-| Concern | Tools | Role |
-| :--- | :--- | :--- |
-| Model access | Claude, GPT, OpenRouter-style multi-provider routing | One key, many models, governed spend and partner planes |
-| Protocol | MCP servers and skills | Local tools, legal agents, and portable workflows across assistants |
-| Orchestration | Loop Engineering, Zeroshot | Report-only loops, blind validation, and crash-safe multi-agent runs |
-| Operator channels | Telegram bots, messaging previews | Silent-by-default alerts and approval inboxes where work already lives |
-| Councils | Multi-model review patterns | Cross-check drafting and decisions before irreversible actions |
+Tools are chosen for control and production discipline — not fashion.
 
-### Native, local-first, and on-device
-
-<p align="center">
-  <img src="./assets/stack/apple.svg" height="34" alt="Apple" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/swift.svg" height="34" alt="Swift" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/tauri.svg" height="34" alt="Tauri" />
-  &nbsp;&nbsp;
-  <img src="./assets/stack/mediapipe.svg" height="34" alt="MediaPipe" />
-</p>
-
-| Concern | Tools | Role |
-| :--- | :--- | :--- |
-| Desktop | Swift (macOS), Tauri + Rust | Offline clipboard systems and lightweight native shells |
-| Vision | MediaPipe Tasks Vision | Gesture interfaces that never send the camera off-device |
-| Privacy default | Local SQLite, on-disk stores, zero telemetry | Private documents and founder memory stay local unless there is a reason not to |
+**Languages:** TypeScript · Python · Swift · Rust  
+**Products:** Next.js · React · Vite · Tailwind  
+**Data:** Supabase · PostgreSQL · SQLite  
+**Deploy:** Vercel · Railway · Cloudflare · Docker  
+**Agents:** Claude · GPT · MCP · Loop · Zeroshot
 
 <details>
 <summary><strong>Full capability map</strong></summary>
@@ -169,63 +111,13 @@ Messaging     Telegram · approval inboxes · silent digests
 
 ---
 
-## Selected systems
-
-A strategic map. Not a repository tour.
-
-### Legal operations
-
-| System | Role in the stack |
-| :--- | :--- |
-| **SHB Case Manager** | Chambers OS for matters, hearings, deadlines, diary reconciliation, and dual Sheets/Supabase backends |
-| **Optimist Prime** | Telegram-first legal assistant: cause-list watchers, document memory, drafting, budgeted AI, silent alerts |
-| **arya-ai** | Local Indian-law MCP layer: specialist agents, drafting protocols, NCLT/IBC workflows, verification-first routing |
-| **Court data rails** | Programmatic access across district courts, high courts, and the Supreme Court for live matter intelligence |
-
-### AI infrastructure
-
-| System | Role in the stack |
-| :--- | :--- |
-| **Klint** | Unified AI API gateway: one key, multi-provider routing, partner/reseller control plane, usage governance |
-| **AgentDock** | Messaging-first agent command center: runtimes, memory profiles, approval inbox, credits, activity ledger |
-
-### Local-first and native
-
-| System | Role in the stack |
-| :--- | :--- |
-| **klyppr** | Native macOS clipboard system: offline cleaning, local history, zero telemetry |
-| **Bloom** | On-device gesture interface: MediaPipe in-browser, camera never leaves the machine |
-
-### Operating layer
-
-| System | Role in the stack |
-| :--- | :--- |
-| **Eden OS** | Private founder OS: projects, inbox, runs, approvals, audit, backup/restore foundations |
-| **Stylekit / BrandFrames** | Brand extraction and governed content generation for design systems inside Framer |
-
----
-
 ## Operating principles
 
-1. **Build the substrate first.** Interfaces without routing, state, and failure modes are decoration.
-2. **Keep authority explicit.** Autonomous work needs approvals, budgets, ledgers, and kill switches.
-3. **Prefer local when the problem is private.** Clipboard, vision, legal documents, and founder memory should not default to the cloud.
-4. **Ship for operators.** Chambers, partners, and agents need control planes, not demos.
-5. **Curate ruthlessly.** Few systems, deep ownership, production discipline over catalogue sprawl.
-
----
-
-## At a glance
-
-```text
-┌──────────────────┬────────────────────────────────────────────┐
-│ Legal depth      │  32 specialist agents · 235 protocol files │
-│ Court coverage   │  700+ district courts · 25 HCs · SC        │
-│ AI routing       │  Multi-provider gateway + partner plane    │
-│ Native surface   │  Offline macOS utility · on-device vision  │
-│ Operating mode   │  Build · operate · refine                  │
-└──────────────────┴────────────────────────────────────────────┘
-```
+1. **Make authority explicit.** Autonomous work needs approvals, budgets, ledgers, and kill switches.
+2. **Prefer local when the problem is private.** Clipboard, vision, legal documents, and founder memory should not default to the cloud.
+3. **Ship for operators.** Chambers, partners, and agents need control planes, not demos.
+4. **Curate ruthlessly.** Few systems, deep ownership, production discipline over catalogue sprawl.
+5. **Quiet is valid.** Prefer three excellent signals over twenty average ones.
 
 ---
 
@@ -234,18 +126,18 @@ A strategic map. Not a repository tour.
 <div align="center">
 
 <img
-  src="https://streak-stats.demolab.com?user=edenbuilds&hide_border=true&background=050607&stroke=1c2620&ring=10b981&fire=10b981&currStreakLabel=10b981&sideLabels=8b949e&currStreakNum=f5f2ea&sideNums=e8e4dc&dates=6e7681"
+  src="https://streak-stats.demolab.com?user=edenbuilds&hide_border=true&background=faf8f4&stroke=e8e0d4&ring=b65c28&fire=b65c28&currStreakLabel=b65c28&sideLabels=6b5b4a&currStreakNum=2a2118&sideNums=2a2118&dates=6b5b4a"
   alt="Commit streak" height="170" />
 
 <br /><br />
 
 <img
-  src="https://github-readme-activity-graph.vercel.app/graph?username=edenbuilds&theme=github-compact&bg_color=050607&color=e8e4dc&line=10b981&point=f5f2ea&area=true&area_color=10b981&hide_border=true&custom_title=Commit%20activity"
+  src="https://github-readme-activity-graph.vercel.app/graph?username=edenbuilds&theme=react&bg_color=faf8f4&color=2a2118&line=b65c28&point=b65c28&area=true&area_color=b65c28&hide_border=true&custom_title=Commit%20activity"
   alt="Commit activity over time" width="100%" />
 
 </div>
 
-<sub>Cards render live from the GitHub API. <code>github-readme-stats</code> is deliberately not used here: its public instance rate limits to 503 for long stretches, and a broken image is worse than one fewer card.</sub>
+<sub>Cards render live from the GitHub API. A broken image is worse than one fewer card — public rate-limited widgets are avoided when they fail often.</sub>
 
 ---
 
