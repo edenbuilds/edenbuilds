@@ -2,36 +2,36 @@
   <title>EDEN — systems underneath hard problems</title>
   <defs>
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.9"/>
-      <stop offset="55%" stop-color="#e8e4dc" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#e8e4dc" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#b65c28" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#2a2118" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2a2118" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#10b981" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#b65c28" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#b65c28" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#b65c28" stop-opacity="0"/>
     </linearGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#e8e4dc" stroke-opacity="0.045" stroke-width="1"/>
+      <path d="M40 0H0V40" fill="none" stroke="#2a2118" stroke-opacity="0.045" stroke-width="1"/>
     </pattern>
     <clipPath id="card"><rect x="740" y="72" width="404" height="176" rx="10"/></clipPath>
   </defs>
 
-  <rect width="1200" height="320" fill="#050607"/>
+  <rect width="1200" height="320" fill="#faf8f4"/>
   <rect width="1200" height="320" fill="url(#grid)"/>
 
   <!-- monogram: square that draws itself, then holds -->
   <g transform="translate(72 96)">
-    <rect x="0" y="0" width="128" height="128" rx="8" fill="#0c1512" stroke="#10b981" stroke-opacity="0.5" stroke-width="1.5"
+    <rect x="0" y="0" width="128" height="128" rx="8" fill="#ffffff" stroke="#b65c28" stroke-opacity="0.5" stroke-width="1.5"
           stroke-dasharray="512" stroke-dashoffset="512">
       <animate attributeName="stroke-dashoffset" from="512" to="0" dur="1.8s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
     </rect>
     <text x="64" y="82" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
-          font-size="52" font-weight="600" fill="#f5f2ea" letter-spacing="2" opacity="0">
+          font-size="52" font-weight="600" fill="#2a2118" letter-spacing="2" opacity="0">
       E<animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.9s" fill="freeze"/>
     </text>
     <!-- accent pulse: scarce, slow, deliberate -->
-    <circle cx="112" cy="16" r="3" fill="#10b981" opacity="0">
+    <circle cx="112" cy="16" r="3" fill="#b65c28" opacity="0">
       <animate attributeName="opacity" values="0;1;0.35;1;0.35" dur="4s" begin="1.6s" repeatCount="indefinite"/>
     </circle>
   </g>
@@ -39,7 +39,7 @@
   <!-- wordmark -->
   <g transform="translate(236 0)">
     <text x="0" y="150" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial,sans-serif"
-          font-size="64" font-weight="700" fill="#f5f2ea" letter-spacing="14" opacity="0">
+          font-size="64" font-weight="700" fill="#2a2118" letter-spacing="14" opacity="0">
       EDEN<animate attributeName="opacity" from="0" to="1" dur="0.9s" begin="0.35s" fill="freeze"/>
     </text>
 
@@ -54,13 +54,13 @@
     </rect>
 
     <text x="2" y="212" font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
-          font-size="15" fill="#8b949e" letter-spacing="3" opacity="0">
+          font-size="15" fill="#6b5b4a" letter-spacing="3" opacity="0">
       SYSTEMS UNDERNEATH HARD PROBLEMS
       <animate attributeName="opacity" from="0" to="1" dur="0.9s" begin="1.5s" fill="freeze"/>
     </text>
 
     <text x="2" y="244" font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
-          font-size="12.5" fill="#6e7681" letter-spacing="1.5" opacity="0">
+          font-size="12.5" fill="#6b5b4a" letter-spacing="1.5" opacity="0">
       BUILD  ·  OPERATE  ·  REFINE
       <animate attributeName="opacity" from="0" to="1" dur="0.9s" begin="1.9s" fill="freeze"/>
     </text>
@@ -69,27 +69,27 @@
   <!-- operating memo card -->
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1" dur="1s" begin="1.1s" fill="freeze"/>
-    <rect x="740" y="72" width="404" height="176" rx="10" fill="#0c1512" stroke="#e8e4dc" stroke-opacity="0.09"/>
+    <rect x="740" y="72" width="404" height="176" rx="10" fill="#ffffff" stroke="#2a2118" stroke-opacity="0.09"/>
     <g clip-path="url(#card)">
       <!-- scanline: the only motion inside the card, slow enough to read as instrumentation -->
-      <rect x="740" y="72" width="404" height="34" fill="#10b981" opacity="0.05">
+      <rect x="740" y="72" width="404" height="34" fill="#b65c28" opacity="0.05">
         <animate attributeName="y" values="60;226;60" dur="11s" repeatCount="indefinite"
                  calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
       </rect>
     </g>
-    <text x="766" y="104" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10.5" fill="#10b981" letter-spacing="2.5">OPERATING MEMO</text>
+    <text x="766" y="104" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10.5" fill="#b65c28" letter-spacing="2.5">OPERATING MEMO</text>
 
-    <text x="766" y="138" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#8b949e">substrate</text>
-    <text x="1118" y="138" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#e8e4dc">routing · memory · approvals</text>
+    <text x="766" y="138" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#6b5b4a">systems</text>
+    <text x="1118" y="138" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#2a2118">memory · approvals · logs</text>
 
-    <text x="766" y="166" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#8b949e">authority</text>
-    <text x="1118" y="166" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#e8e4dc">budgets · ledgers · kill switches</text>
+    <text x="766" y="166" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#6b5b4a">control</text>
+    <text x="1118" y="166" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#2a2118">budgets · approvals · kill switches</text>
 
-    <text x="766" y="194" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#8b949e">locality</text>
-    <text x="1118" y="194" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#e8e4dc">private compute stays on device</text>
+    <text x="766" y="194" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#6b5b4a">privacy</text>
+    <text x="1118" y="194" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#2a2118">camera and docs stay on-device</text>
 
-    <text x="766" y="222" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#8b949e">surface</text>
-    <text x="1118" y="222" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#e8e4dc">control planes, not demos</text>
+    <text x="766" y="222" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#6b5b4a">outcome</text>
+    <text x="1118" y="222" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12.5" fill="#2a2118">reliable systems, not demos</text>
   </g>
 
   <rect x="0" y="318" width="1200" height="2" fill="url(#rule)"/>
