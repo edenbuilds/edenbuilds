@@ -36,6 +36,7 @@ Evidence over claims. Real bugs, tests, and review cycles on libraries people ac
 
 | Repo | Contribution |
 | :--- | :--- |
+| **[mastra-ai/mastra](https://github.com/mastra-ai/mastra/pull/20961)** | DurableAgent clears `workflow.events.v2` on cleanup · [PG/DSQL PoolClient serialization](https://github.com/mastra-ai/mastra/pull/20869) · [workflow `/start` rejection catch](https://github.com/mastra-ai/mastra/pull/20876) |
 | **[genspark-ai/genoffice](https://github.com/genspark-ai/genoffice/pull/27)** | Fixed empty post-tool AI turns that poisoned multi-turn history · [also Linux maximize layout](https://github.com/genspark-ai/genoffice/pull/20) |
 | **[iamshouvikmitra/bharat-courts](https://github.com/iamshouvikmitra/bharat-courts/pull/7)** | Cause-list PDF links joined on the wrong path (always 404) |
 
@@ -43,11 +44,12 @@ Evidence over claims. Real bugs, tests, and review cycles on libraries people ac
 
 | Repo | Focus |
 | :--- | :--- |
-| **[openai/openai-node](https://github.com/openai/openai-node/pull/2086)** | AbortSignal cleanup after fetch / streaming bodies · Deno hang regression |
-| **[vercel/ai](https://github.com/vercel/ai/pull/18465)** | Resume partial tool streams · async-iterable unlock · hash collision fix |
-| **[langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs/pull/11306)** | Script-aware approximate token counting for agent budgets |
-| **[better-auth/better-auth](https://github.com/better-auth/better-auth/pull/10699)** | TikTok OAuth `clientId` mapping · [account cookie on link](https://github.com/better-auth/better-auth/pull/10700) |
-| **[honojs/hono](https://github.com/honojs/hono/pull/5194)** | ETag `cacheableStatusCodes` so 4xx/5xx do not collapse to 304 |
+| **[openai/openai-node](https://github.com/openai/openai-node/pull/2086)** | Compose the caller AbortSignal · no leaked listener · Deno hang regression |
+| **[firecrawl/firecrawl](https://github.com/firecrawl/firecrawl/pull/4253)** | Await crawl-status WS send · [stop polling on disconnect](https://github.com/firecrawl/firecrawl/pull/4261) · [sitemap `getCrawl` try/finally](https://github.com/firecrawl/firecrawl/pull/4266) |
+| **[vercel/ai](https://github.com/vercel/ai/pull/18465)** | Resume partial tool streams · [WorkflowAgent `prepareCall` retries/abort](https://github.com/vercel/ai/pull/18593) |
+| **[better-auth/better-auth](https://github.com/better-auth/better-auth/pull/10717)** | Validate password before burning reset tokens · [TikTok `clientId`](https://github.com/better-auth/better-auth/pull/10699) · [account cookie on link](https://github.com/better-auth/better-auth/pull/10700) |
+| **[honojs/middleware](https://github.com/honojs/middleware/pull/2069)** | zod-openapi `z` binding survives tree-shake · [SSE abort → `onclose`](https://github.com/honojs/middleware/pull/2075) |
+| **[langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs/pull/11306)** | Script-aware token counting · [empty tool-call args](https://github.com/langchain-ai/langchainjs/pull/11314) · [nested `anyOf`](https://github.com/langchain-ai/langchainjs/pull/11315) |
 | **[alex8088/electron-vite](https://github.com/alex8088/electron-vite/pull/919)** | ESM-shim: ignore import-like text inside strings/comments |
 
 <!-- signal:start -->
@@ -150,7 +152,7 @@ Messaging     Telegram · approval inboxes · silent digests
 │ Legal depth      │  Specialist agents · drafting protocols    │
 │ Court surface    │  District · HC · SC intelligence rails     │
 │ AI routing       │  Multi-provider gateway + partner plane    │
-│ Open source      │  GenOffice · OpenAI · Vercel AI · LangChain│
+│ Open source      │  Mastra · Firecrawl · OpenAI · Vercel AI   │
 │ Operating mode   │  Build · operate · refine                  │
 └──────────────────┴────────────────────────────────────────────┘
 ```
