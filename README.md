@@ -20,12 +20,14 @@ Small fixes on libraries people already run.
 | :--- | :--- |
 | [mastra](https://github.com/mastra-ai/mastra/pull/20996) | Durable cleanup, PG/DSQL serialization, workflow `/start` catch, serverless title gen via `waitUntil` |
 | [hono/middleware](https://github.com/honojs/middleware/pull/2069) | zod-openapi `z` binding survives tree-shake |
+| [hono/middleware](https://github.com/honojs/middleware/pull/2075) | Resumable MCP SSE disconnect callback without misusing terminal `onclose` |
+| [electron-vite](https://github.com/alex8088/electron-vite/pull/920) | Vite 8 SWC plugin disables the Oxc transform path |
 | [genoffice](https://github.com/genspark-ai/genoffice/pull/27) | Empty post-tool turns · [X11 maximize layout](https://github.com/genspark-ai/genoffice/pull/20) |
 | [bharat-courts](https://github.com/iamshouvikmitra/bharat-courts/pull/7) | Cause-list PDF links joined on the wrong path |
 
-**Open**
+**Open work**
 
-[openai-node](https://github.com/openai/openai-node/pull/2086) · [vercel/ai](https://github.com/vercel/ai/pull/18593) · [firecrawl](https://github.com/firecrawl/firecrawl/pull/4253) · [better-auth](https://github.com/better-auth/better-auth/pull/10717) · [undici](https://github.com/nodejs/undici/pull/5661) · [langgraphjs](https://github.com/langchain-ai/langgraphjs/pull/2668) · [langchainjs](https://github.com/langchain-ai/langchainjs/pull/11306) · [hono SSE](https://github.com/honojs/middleware/pull/2075)
+[MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/pull/2667) · [Cloudflare AI](https://github.com/cloudflare/ai/pull/639) · [Browserbase SDK](https://github.com/browserbase/sdk-node/pull/212) · [LangChain.js](https://github.com/langchain-ai/langchainjs/pull/11379) · [Firecrawl](https://github.com/firecrawl/firecrawl/pull/4253) · [Better Auth](https://github.com/better-auth/better-auth/pull/10717) · [Google Gen AI](https://github.com/googleapis/js-genai/pull/1834) · [LangChain.js token budgets](https://github.com/langchain-ai/langchainjs/pull/11306)
 
 <!-- signal:start -->
 <!-- signal:end -->
