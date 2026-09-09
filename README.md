@@ -27,7 +27,7 @@ Small fixes on libraries people already run.
 
 **Open work**
 
-[MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/pull/2667) · [Cloudflare AI](https://github.com/cloudflare/ai/pull/639) · [Browserbase SDK](https://github.com/browserbase/sdk-node/pull/212) · [LangChain.js](https://github.com/langchain-ai/langchainjs/pull/11379) · [Firecrawl](https://github.com/firecrawl/firecrawl/pull/4253) · [Better Auth](https://github.com/better-auth/better-auth/pull/10717) · [Google Gen AI](https://github.com/googleapis/js-genai/pull/1834) · [LangChain.js token budgets](https://github.com/langchain-ai/langchainjs/pull/11306)
+[MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/pull/2667) · [Cloudflare AI](https://github.com/cloudflare/ai/pull/639) · [Browserbase SDK](https://github.com/browserbase/sdk-node/pull/212) · [LangChain.js](https://github.com/langchain-ai/langchainjs/pull/11379) · [Firecrawl](https://github.com/firecrawl/firecrawl/pull/4253) · [Better Auth](https://github.com/better-auth/better-auth/pull/10717) · [Google Gen AI](https://github.com/googleapis/js-genai/pull/1834) · [LangChain.js token budgets](https://github.com/langchain-ai/langchainjs/pull/11306) · [hunk](https://github.com/modem-dev/hunk/pull/1080)
 
 <!-- signal:start -->
 <!-- signal:end -->
