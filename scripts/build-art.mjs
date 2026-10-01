@@ -67,10 +67,10 @@ function hero() {
 ${cols.join('')}
 <rect x="56" y="48" width="56" height="56" fill="${C.yellow}"/>
 <g transform="translate(70 62) scale(2.33)" fill="${C.ink}"><use href="#b"/></g>
-${text(132, 90, 34, C.white, 'EDEN BUILDS<tspan dy="-12" font-size="14">©</tspan>', 'font-weight="700" letter-spacing="0.5"')}
+${text(132, 92, 40, C.white, 'EDEN BUILDS<tspan dy="-12" font-size="14">©</tspan>', 'font-weight="700" letter-spacing="0.5"')}
 ${head}
-${text(56, 404, 28, C.white, 'edenbuilds.me', 'font-weight="500" fill-opacity=".72"')}
-${text(1144, 404, 28, C.white, '2026©', 'font-weight="500" text-anchor="end" fill-opacity=".72"')}`)
+${text(56, 408, 34, C.white, 'edenbuilds.me', 'font-weight="500" fill-opacity=".72"')}
+${text(1144, 408, 34, C.white, '2026©', 'font-weight="500" text-anchor="end" fill-opacity=".72"')}`)
 }
 
 function mergesChart() {
@@ -95,11 +95,11 @@ function mergesChart() {
   return svg(1200, 500, 'Cumulative upstream merges from 15-07-2026 to today, drawn as a dithered area chart.', css, `<rect width="1200" height="500" fill="${C.gray}"/>
 <g transform="translate(56 36) scale(${S / 12})">${cols.join('')}</g>
 <rect y="330" width="1200" height="170" fill="${C.ink}"/>
-${text(56, 434, 104, C.white, merged.length, 'font-weight="700" letter-spacing="-3"')}
-${text(58, 478, 30, '#C9CBD1', 'merged upstream')}
-${text(400, 434, 104, C.white, open.length, 'font-weight="700" letter-spacing="-3"')}
-${text(402, 478, 30, '#C9CBD1', 'in review')}
-${text(1144, 478, 26, '#C9CBD1', `${d(t0)} to ${d(t1)}`, 'text-anchor="end"')}`)
+${text(56, 428, 104, C.white, merged.length, 'font-weight="700" letter-spacing="-3"')}
+${text(58, 480, 38, '#C9CBD1', 'merged upstream')}
+${text(400, 428, 104, C.white, open.length, 'font-weight="700" letter-spacing="-3"')}
+${text(402, 480, 38, '#C9CBD1', 'in review')}
+${text(1144, 480, 32, '#C9CBD1', `${d(t0)} to ${d(t1)}`, 'text-anchor="end"')}`)
 }
 
 function activity() {
@@ -117,7 +117,7 @@ function activity() {
   const css = '.c{animation:in .6s ease-out both;animation-delay:calc(var(--i)*18ms)}@keyframes in{from{opacity:0}}'
   return svg(1200, 340, 'Contribution activity over the last 12 months, drawn as a dot grid.', css, `<rect width="1200" height="340" fill="${C.ink}"/>
 ${text(56, 98, 64, C.white, cal.totalContributions.toLocaleString('en-US'), 'font-weight="700" letter-spacing="-2"')}
-${text(58, 134, 28, C.mute, 'contributions in the last 12 months')}
+${text(58, 138, 34, C.mute, 'contributions in the last 12 months')}
 <g transform="translate(56 160) scale(${cell / 12})">${cols.join('')}</g>`)
 }
 

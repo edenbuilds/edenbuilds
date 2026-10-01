@@ -16,7 +16,7 @@ The dither unit is a 12-unit cell holding one of three marks: pixel, plus, block
 
 ## Rules
 
-- Text in the SVGs is live text in the system grotesk stack. Smallest size is 26 units so it reads at 390px.
+- Text in the SVGs is live text in the system grotesk stack. Smallest size is 32 units so it reads at 390px.
 - Animation runs once on load, staggered per column. Only the hero scan loops. `prefers-reduced-motion` turns it all off.
 - Dates are DD-MM-YYYY, Asia/Kolkata.
 - No emoji, no badges, no icon walls, no hosted stat widgets.
