@@ -34,7 +34,7 @@ const use = (lvl, y) => `<use href="#${'abc'[lvl - 1]}" y="${y}"/>`
 // One animated <g> per column keeps the file small; --i is the column index driving the stagger.
 const column = (i, x, marks, extra = '') => `<g transform="translate(${x} 0)"><g class="c" style="--i:${i}"${extra}>${marks.join('')}</g></g>`
 const svg = (w, h, label, css, body) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${label}">
-<style>${css}@media (prefers-reduced-motion:reduce){.c,.l{animation:none!important}}</style>
+<style>${css}@media (prefers-reduced-motion:reduce){.c,.l,.cv,.sc{animation:none!important}}</style>
 <defs>${GLYPHS}</defs>
 ${body}
 </svg>
@@ -42,35 +42,58 @@ ${body}
 const text = (x, y, size, fill, str, extra = '') =>
   `<text x="${x}" y="${y}" font-family="${FONT}" font-size="${size}" fill="${fill}" ${extra}>${str}</text>`
 
+// Hero after usevisuals: full-bleed blue dither in seven tones on an 8px cell, with two frosted-glass cards.
+// The card backdrop is the same field blurred and clipped to the card, because SVG has no backdrop-filter.
+const BLUES = ['#EAF6FF', '#BFE3FB', '#8CC4F5', '#4F95EE', '#2A62DA', '#1B3FB0', '#12297A']
 function hero() {
-  const W = 100, H = 37
-  const cols = []
-  for (let c = 0; c < W; c++) {
-    const marks = []
-    for (let r = 0; r < H; r++) {
-      const u = c / W, w = r / H
-      const n = 0.5 * Math.sin(u * 9 + 1.7 * Math.sin(w * 5 + 1)) + 0.5 * Math.sin(w * 11 - u * 4 + 2 * Math.sin(u * 6))
-      const v = clamp((n + 0.3) * 1.7) * smooth(0.56, 0.8, u) * (1 - 0.2 * w)
-      const l = level(v, c, r)
-      if (l) marks.push(use(l, r * 12))
+  const W = 1200, H = 540, S = 8, COLS = W / S, ROWS = Math.ceil(H / S)
+  const paths = BLUES.map(() => [])
+  for (let r = 0; r < ROWS; r++) {
+    const tones = []
+    for (let c = 0; c < COLS; c++) {
+      const u = c / COLS, w = r / ROWS
+      const ridge = 0.5 * Math.sin(u * 7 + 2.2 * Math.sin(w * 4.5 + 0.6)) + 0.5 * Math.sin(u * 3.1 - w * 6 + 1.3)
+      const depth = clamp(w * 1.05 + 0.2 * ridge)
+      tones.push(clamp(Math.round(depth * (BLUES.length - 1) + (BAYER[r & 3][c & 3] / 16 - 0.5) * 1.1), 0, BLUES.length - 1))
     }
-    if (marks.length) cols.push(column(c, c * 12, marks, ` fill="${C.sky}"`))
+    for (let c = 1, start = 0; c <= COLS; c++) {
+      if (c === COLS || tones[c] !== tones[start]) {
+        paths[tones[start]].push(`M${start * S} ${r * S}h${(c - start) * S}v${S}h${-(c - start) * S}z`)
+        start = c
+      }
+    }
   }
-  const css = `.c{animation:in .7s cubic-bezier(.16,1,.3,1) both,scan 9s linear infinite;animation-delay:calc(var(--i)*22ms),calc(var(--i)*45ms + 2.6s)}
-@keyframes in{from{opacity:0}}
-@keyframes scan{0%,100%{fill:${C.sky}}6%{fill:${C.white}}15%{fill:${C.sky}}}
-.l{animation:up .9s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(var(--n)*110ms + 250ms)}
+  const field = paths.map((d, i) => `<path fill="${BLUES[i]}" d="${d.join('')}"/>`).join('')
+  const A = { x: 56, y: 52, w: 800, h: 282 }, B = { x: 500, y: 386, w: 644, h: 112 }
+  const rect = (k, extra) => `<rect x="${k.x}" y="${k.y}" width="${k.w}" height="${k.h}" rx="22" ${extra}/>`
+  const glass = (k) => rect(k, 'fill="#0E1B4D" fill-opacity=".62" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"')
+  const box = (x, label) => `<rect x="${x}" y="408" width="250" height="68" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".4" stroke-width="1.5"/>`
+    + text(x + 125, 452, 30, C.white, label, 'font-weight="500" text-anchor="middle"')
+  const css = `.cv{transform-box:fill-box;transform-origin:right center;transform:scaleX(0);animation:wipe 1.7s cubic-bezier(.5,0,.15,1) both}
+@keyframes wipe{from{transform:scaleX(1)}}
+.sc{opacity:0;animation:scan 1.7s cubic-bezier(.5,0,.15,1) both}
+@keyframes scan{from{opacity:1;transform:translateX(0)}88%{opacity:1}to{opacity:0;transform:translateX(1196px)}}
+.l{animation:up .9s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(var(--n)*110ms + 1100ms)}
 @keyframes up{from{opacity:0;transform:translateY(18px)}}`
   const lines = ['Software that records', 'what happened and', 'who approved it.']
-  const head = lines.map((t, n) => text(56, 214 + n * 70, 66, C.white, t, `font-weight="700" letter-spacing="-2" class="l" style="--n:${n}"`)).join('')
-  return svg(1200, 444, 'Eden Builds. Software that records what happened and who approved it.', css, `<rect width="1200" height="444" fill="${C.ink}"/>
-${cols.join('')}
-<rect x="56" y="48" width="56" height="56" fill="${C.yellow}"/>
-<g transform="translate(70 62) scale(2.33)" fill="${C.ink}"><use href="#b"/></g>
-${text(132, 92, 40, C.white, 'EDEN BUILDS<tspan dy="-12" font-size="14">©</tspan>', 'font-weight="700" letter-spacing="0.5"')}
+  const head = lines.map((t, n) => text(100, 150 + n * 70, 64, C.white, t, `font-weight="700" letter-spacing="-2" class="l" style="--n:${n}"`)).join('')
+  return svg(W, H, 'Eden Builds. Software that records what happened and who approved it.', css, `<defs>
+<g id="f" shape-rendering="crispEdges">${field}</g>
+<filter id="bl"><feGaussianBlur stdDeviation="10"/></filter>
+<clipPath id="ca">${rect(A, '')}</clipPath><clipPath id="cb">${rect(B, '')}</clipPath>
+</defs>
+<rect width="${W}" height="${H}" fill="${C.ink}"/>
+<use href="#f"/>
+<g clip-path="url(#ca)"><use href="#f" filter="url(#bl)"/></g>
+<g clip-path="url(#cb)"><use href="#f" filter="url(#bl)"/></g>
+${glass(A)}${glass(B)}
+<rect class="cv" width="${W}" height="${H}" fill="${C.ink}"/>
+<rect class="sc" width="4" height="${H}" fill="${C.yellow}"/>
 ${head}
-${text(56, 408, 34, C.white, 'edenbuilds.me', 'font-weight="500" fill-opacity=".72"')}
-${text(1144, 408, 34, C.white, '2026©', 'font-weight="500" text-anchor="end" fill-opacity=".72"')}`)
+<g class="l" style="--n:3">${box(524, 'What happened')}<path d="M800 442h44M800 442l9-9M800 442l9 9M844 442l-9-9M844 442l-9 9" stroke="#fff" stroke-opacity=".7" stroke-width="2" fill="none"/>${box(870, 'Who approved')}</g>
+<rect x="56" y="414" width="56" height="56" fill="${C.yellow}"/>
+<g transform="translate(70 428) scale(2.33)" fill="${C.ink}"><use href="#b"/></g>
+${text(132, 456, 40, C.white, 'EDEN BUILDS<tspan dy="-14" font-size="16">©</tspan>', 'font-weight="700" letter-spacing="0.5"')}`)
 }
 
 function mergesChart() {
