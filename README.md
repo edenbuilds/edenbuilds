@@ -47,6 +47,8 @@ The tables rebuild every day from GitHub. A pull request moves to Merged only af
 
 ## What I maintain
 
+<img src="assets/maintain.svg" alt="Six repositories I maintain: accord, agentloop, blackbox, metr, bloom and maharashtra-courts-drafting, each with the date of its last push." width="100%">
+
 | Repository | What it does |
 | :-- | :-- |
 | [accord](https://github.com/edenbuilds/accord) | MCP gateway and control plane. Policies are explicit, execution is bounded, and every decision leaves a receipt. Developer preview. |
@@ -60,7 +62,9 @@ Client work is private. It includes a case manager for a litigation chambers and
 
 ## How I build
 
-Agents that act on their own get approvals, budgets and a kill switch. Private data such as camera frames, clipboard contents and court filings stays on the device by default.
+<img src="assets/build.svg" alt="How I build: agents ask for approval first, spend is capped, one switch halts everything, and private data stays on the device." width="100%">
+
+Private data such as camera frames, clipboard contents and court filings stays on the device by default.
 
 TypeScript, Python, Swift and Rust. Next.js, Supabase, Vercel, Railway and Cloudflare.
 
@@ -68,4 +72,4 @@ TypeScript, Python, Swift and Rust. Next.js, Supabase, Vercel, Railway and Cloud
 
 <img src="assets/activity.svg" alt="Contribution activity over the last 12 months, drawn as a dot grid." width="100%">
 
-[edenbuilds.me](https://edenbuilds.me)
+<a href="https://edenbuilds.me"><img src="assets/close.svg" alt="edenbuilds.me" width="100%"></a>
