@@ -80,7 +80,7 @@ function hero() {
   const rect = (k, extra) => `<rect x="${k.x}" y="${k.y}" width="${k.w}" height="${k.h}" rx="22" ${extra}/>`
   const glass = (k) => rect(k, 'fill="#0E1B4D" fill-opacity=".62" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"')
   const box = (x, label) => `<rect x="${x}" y="408" width="250" height="68" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".4" stroke-width="1.5"/>`
-    + text(x + 125, 452, 30, C.white, label, 'font-weight="500" text-anchor="middle"')
+    + text(x + 125, 452, 32, C.white, label, 'font-weight="500" text-anchor="middle"')
   const css = `.cv{transform-box:fill-box;transform-origin:right center;transform:scaleX(0);animation:wipe 1.7s cubic-bezier(.5,0,.15,1) both}
 @keyframes wipe{from{transform:scaleX(1)}}
 .sc{opacity:0;animation:scan 1.7s cubic-bezier(.5,0,.15,1) both}
@@ -134,7 +134,7 @@ ${pix(56, 428, 112, C.white, merged.length)}
 ${text(58, 480, 38, '#C9CBD1', 'merged upstream', 'font-weight="500"')}
 ${pix(400, 428, 112, C.white, open.length)}
 ${text(402, 480, 38, '#C9CBD1', 'in review', 'font-weight="500"')}
-${text(1144, 480, 32, '#C9CBD1', `${d(t0)} to ${d(t1)}`, 'font-weight="500" text-anchor="end"')}`)
+${text(1144, 480, 36, '#C9CBD1', `${d(t0)} to ${d(t1)}`, 'font-weight="500" text-anchor="end"')}`)
 }
 
 // maintain.svg: one flat tile per repo I maintain. The art is a deliberate shape for what the repo does:
@@ -163,11 +163,11 @@ function maintain() {
     const [bg, fg, mark] = look[n], x = (n % 2) * (TW + G), y = Math.floor(n / 2) * (TH + G)
     const cut = name.length > 16 ? name.indexOf('-') + 1 : 0
     const lines = cut ? [name.slice(0, cut), name.slice(cut)] : [name]
-    const head = lines.map((t, k) => pix(x + 32, y + (cut ? 68 : 88) + k * 54, 44, fg, t)).join('')
-    const meta = text(x + 32, y + TH - 30, 32, fg, `Pushed ${dmy(Date.parse(repos[`r${n}`].pushedAt))}`, 'font-weight="500" fill-opacity=".72"')
+    const head = lines.map((t, k) => pix(x + 32, y + (cut ? 62 : 88) + k * 54, 44, fg, t)).join('')
+    const meta = text(x + 32, y + TH - 28, 38, fg, `Pushed ${dmy(Date.parse(repos[`r${n}`].pushedAt))}`, 'font-weight="500" fill-opacity=".72"')
     return `<rect x="${x}" y="${y}" width="${TW}" height="${TH}" fill="${bg}"/>
 <g class="l" style="--n:${n}">${head}${meta}</g>
-<g transform="translate(${x + TW - 32 - 158} ${y + 24}) scale(1.2)" fill="${mark}">${art(ART[name], 11, 10, n * 2)}</g>`
+<g transform="translate(${x + TW - 32 - 145} ${y + 30}) scale(1.1)" fill="${mark}">${art(ART[name], 11, 10, n * 2)}</g>`
   })
   const css = `.c{animation:in .6s ease-out both;animation-delay:calc(var(--i)*24ms)}@keyframes in{from{opacity:0;transform:translateY(8px)}}
 .l{animation:up .8s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(var(--n)*90ms)}@keyframes up{from{opacity:0;transform:translateY(12px)}}`
@@ -191,7 +191,7 @@ function build() {
   const tiles = RULES.map(([title, sub, bg, fg, mark, fn], n) => {
     const x = (n % 2) * (TW + G), y = Math.floor(n / 2) * (TH + G)
     return `<rect x="${x}" y="${y}" width="${TW}" height="${TH}" fill="${bg}"/>
-<g class="l" style="--n:${n}">${pix(x + 40, y + 112, 52, fg, title)}${text(x + 40, y + 166, 32, fg, sub, 'font-weight="500" fill-opacity=".75"')}</g>
+<g class="l" style="--n:${n}">${pix(x + 40, y + 112, 52, fg, title)}${text(x + 40, y + 168, 38, fg, sub, 'font-weight="500" fill-opacity=".75"')}</g>
 <g transform="translate(${x + TW - 36 - 176} ${y + 22}) scale(1.3333)" fill="${mark}">${art(fn, 11, 11, n * 3)}</g>`
   })
   const css = `.c{animation:in .6s ease-out both;animation-delay:calc(var(--i)*30ms)}@keyframes in{from{opacity:0;transform:translateY(8px)}}
@@ -234,7 +234,7 @@ function activity() {
   const css = '.c{animation:in .6s ease-out both;animation-delay:calc(var(--i)*18ms)}@keyframes in{from{opacity:0}}'
   return svg(1200, 340, 'Contribution activity over the last 12 months, drawn as a dot grid.', css, `<rect width="1200" height="340" fill="${C.ink}"/>
 ${pix(56, 100, 88, C.white, cal.totalContributions.toLocaleString('en-US'))}
-${text(58, 138, 34, C.mute, 'contributions in the last 12 months', 'font-weight="500"')}
+${text(58, 140, 38, C.mute, 'contributions in the last 12 months', 'font-weight="500"')}
 <g transform="translate(56 160) scale(${cell / 12})">${cols.join('')}</g>`)
 }
 
