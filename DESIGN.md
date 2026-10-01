@@ -1,49 +1,23 @@
-# Design System
+# Design
 
-## Visual Theme
+Replaces the earlier paper-and-ember look (reset 01-10-2026).
 
-**Mood:** Founder operating memo. Warm paper canvas, ink type, ember accent. Craft workshop — not cyber green startup.
+## Language
 
-**Aesthetic lane:** Quiet product restraint. One strong hero. Scannable tables. No spectacle.
+Dot-matrix and ordered dither on flat blocks. Tight bold grotesk, large. Black, pale gray, sky blue, one strong blue, one yellow. References: ATIA Labs, MetricAi, Core Stack, New Interfaces.
 
-## Colors
+The dither unit is a 12-unit cell holding one of three marks: pixel, plus, block. The plus is also the logo glyph. Every field comes from `scripts/build-art.mjs`, so the dots are data or a deliberate shape, never decoration.
 
-| Role | Hex | Notes |
-|------|-----|-------|
-| bg / paper | `#faf8f4` | Warm cream canvas (hero + telemetry widgets) |
-| ink | `#2a2118` | Primary type / monogram |
-| muted | `#6b5b4a` | Secondary labels |
-| accent / ember | `#b65c28` | Scarce heat — badges, rings, line (≤10%) |
-| rule / stroke | `#e8e0d4` | Soft borders |
+| File | Shape | Data |
+| :-- | :-- | :-- |
+| `assets/hero.svg` | Sky-blue contour field on black. A white scan crosses it every 9s. | None |
+| `assets/merges.svg` | Core Stack style area chart, blue on gray. Ink plus marks the days a PR merged. | Upstream merged PRs |
+| `assets/activity.svg` | Halftone grid on black. Mark size and color follow quartiles of daily count. | Contribution calendar |
 
-Strategy: **Restrained**. Ember is intentional, never a wall of color.
+## Rules
 
-## Typography
-
-GitHub-constrained. Prefer weight and spacing over font choice.
-
-- Display: EDEN wordmark, tracked caps in hero SVG
-- Body: default GitHub prose, short paragraphs, plain language first
-- Meta: monospace for operating-memo labels in SVG
-- No emoji section grammar; badges used sparingly
-
-## Components (README)
-
-- Animated hero SVG (monogram + memo card, ember rule)
-- Flat-square ember/ink badges (role · focus · mode)
-- Open-source table with landed vs in-review
-- Systems tables by audience (agents · legal · private · ops)
-- Slim tool list + collapsible full capability map
-- ASCII glance panel
-- Live streak + activity graph on paper palette
-- Quiet closing contact line
-- Optional `<!-- signal:start -->` / `<!-- signal:end -->` markers
-
-## Layout
-
-One composition. Strong horizontal rules. Curated sections over exhaustive lists. Stack stays compact; systems stay selective. OSS proof sits high.
-
-## Do / Don't
-
-**Do:** plain language, ember paper identity, concrete PR links, operator voice  
-**Don't:** green cyber badges, purple glow, emoji walls, freelancer tone, unbroken stack icon walls, empty hype
+- Text in the SVGs is live text in the system grotesk stack. Smallest size is 26 units so it reads at 390px.
+- Animation runs once on load, staggered per column. Only the hero scan loops. `prefers-reduced-motion` turns it all off.
+- Dates are DD-MM-YYYY, Asia/Kolkata.
+- No emoji, no badges, no icon walls, no hosted stat widgets.
+- Copy follows petergyang/no-ai-slop: no em dashes, no binary contrasts, no recap lines.
