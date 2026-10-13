@@ -13,6 +13,7 @@ The tables rebuild every day from GitHub. A pull request moves to Merged only af
 
 | Repository | Pull request |
 | :-- | :-- |
+| [modem-dev/hunk](https://github.com/modem-dev/hunk) | [Reject non-callable VCS operation watch hooks](https://github.com/modem-dev/hunk/pull/1080) |
 | [arktypeio/arktype](https://github.com/arktypeio/arktype) | [Recognize cross-realm arrays with Array.isArray](https://github.com/arktypeio/arktype/pull/1646) |
 | [socialincome-san/public](https://github.com/socialincome-san/public) | [Filter Renovate from contributor list](https://github.com/socialincome-san/public/pull/2836) |
 | [loop-js/loop.js](https://github.com/loop-js/loop.js) | [Cover guard race table directly](https://github.com/loop-js/loop.js/pull/25) |
@@ -28,7 +29,6 @@ The tables rebuild every day from GitHub. A pull request moves to Merged only af
 
 | Repository | Pull request |
 | :-- | :-- |
-| [modem-dev/hunk](https://github.com/modem-dev/hunk) | [Reject non-callable VCS operation watch hooks](https://github.com/modem-dev/hunk/pull/1080) |
 | [loop-js/loop.js](https://github.com/loop-js/loop.js) | [Expose heartbeat journal progress](https://github.com/loop-js/loop.js/pull/26) |
 | [langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs) | [Skip duplicate tool_call content blocks](https://github.com/langchain-ai/langchainjs/pull/11492)<br>[Handle empty streamed tool arguments](https://github.com/langchain-ai/langchainjs/pull/11379)<br>[Treat empty tool-call args as {} in finalizeContentBlock](https://github.com/langchain-ai/langchainjs/pull/11314)<br>[Script-aware approximate token counting for middleware budgets](https://github.com/langchain-ai/langchainjs/pull/11306) |
 | [modelcontextprotocol/typescript-sdk](https://github.com/modelcontextprotocol/typescript-sdk) | [Preserve Streamable HTTP request provenance](https://github.com/modelcontextprotocol/typescript-sdk/pull/2667) |
