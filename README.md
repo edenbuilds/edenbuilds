@@ -37,7 +37,6 @@ The tables rebuild every day from GitHub. A pull request moves to Merged only af
 | [anthropics/anthropic-sdk-typescript](https://github.com/anthropics/anthropic-sdk-typescript) | [Preserve const/enum in transformJSONSchema](https://github.com/anthropics/anthropic-sdk-typescript/pull/1143) |
 | [continuedev/continue](https://github.com/continuedev/continue) | [Suppress org/project headers that break under Turkish locales](https://github.com/continuedev/continue/pull/13097) |
 | [googleapis/js-genai](https://github.com/googleapis/js-genai) | [Bundle p-retry into dist/web browser build](https://github.com/googleapis/js-genai/pull/1835)<br>[Ship CJS .d.cts types for require consumers](https://github.com/googleapis/js-genai/pull/1834) |
-| [drizzle-team/drizzle-orm](https://github.com/drizzle-team/drizzle-orm) | [Exclude Neon system roles from provider neon filter](https://github.com/drizzle-team/drizzle-orm/pull/6106) |
 | [knex/knex](https://github.com/knex/knex) | [Escape JSON column default values in formatDefault](https://github.com/knex/knex/pull/6511) |
 <!-- oss:end -->
 
