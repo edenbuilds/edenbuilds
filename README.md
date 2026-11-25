@@ -4,7 +4,7 @@ Eden Builds is a one-person studio. I ship production software for clients, send
 
 ## Fixes in other people's code
 
-The tables rebuild every day from GitHub. A pull request moves to Merged only after a maintainer merges it.
+The tables refresh daily from GitHub. Merged lists only pull requests merged upstream; open pull requests may still need review or updates.
 
 <img src="assets/merges.svg" alt="Cumulative merged pull requests in other people's repositories, from 15-07-2026 to today." width="100%">
 
@@ -33,7 +33,7 @@ The tables rebuild every day from GitHub. A pull request moves to Merged only af
 | [langchain-ai/langchainjs](https://github.com/langchain-ai/langchainjs) | [Skip duplicate tool_call content blocks](https://github.com/langchain-ai/langchainjs/pull/11492)<br>[Handle empty streamed tool arguments](https://github.com/langchain-ai/langchainjs/pull/11379)<br>[Treat empty tool-call args as {} in finalizeContentBlock](https://github.com/langchain-ai/langchainjs/pull/11314)<br>[Script-aware approximate token counting for middleware budgets](https://github.com/langchain-ai/langchainjs/pull/11306) |
 | [modelcontextprotocol/typescript-sdk](https://github.com/modelcontextprotocol/typescript-sdk) | [Preserve Streamable HTTP request provenance](https://github.com/modelcontextprotocol/typescript-sdk/pull/2667) |
 | [browserbase/sdk-node](https://github.com/browserbase/sdk-node) | [Let fetch compute content length](https://github.com/browserbase/sdk-node/pull/212)<br>[Omit Content-Type on DELETE requests](https://github.com/browserbase/sdk-node/pull/198) |
-| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | [Mark sitemap job done even if getCrawl throws](https://github.com/firecrawl/firecrawl/pull/4266), approved<br>[Register NuQ RabbitMQ consumer before setting listener](https://github.com/firecrawl/firecrawl/pull/4263), approved<br>[Stop crawl-status WS polling on client disconnect](https://github.com/firecrawl/firecrawl/pull/4261), approved<br>[Await crawl-status-ws send to avoid unhandledRejection](https://github.com/firecrawl/firecrawl/pull/4253), approved |
+| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | [Mark sitemap job done even if getCrawl throws](https://github.com/firecrawl/firecrawl/pull/4266)<br>[Register NuQ RabbitMQ consumer before setting listener](https://github.com/firecrawl/firecrawl/pull/4263) ([continued upstream](https://github.com/firecrawl/firecrawl/pull/5923))<br>[Stop crawl-status WS polling on client disconnect](https://github.com/firecrawl/firecrawl/pull/4261)<br>[Await crawl-status-ws send to avoid unhandledRejection](https://github.com/firecrawl/firecrawl/pull/4253) |
 | [anthropics/anthropic-sdk-typescript](https://github.com/anthropics/anthropic-sdk-typescript) | [Preserve const/enum in transformJSONSchema](https://github.com/anthropics/anthropic-sdk-typescript/pull/1143) |
 | [continuedev/continue](https://github.com/continuedev/continue) | [Suppress org/project headers that break under Turkish locales](https://github.com/continuedev/continue/pull/13097) |
 | [googleapis/js-genai](https://github.com/googleapis/js-genai) | [Bundle p-retry into dist/web browser build](https://github.com/googleapis/js-genai/pull/1835)<br>[Ship CJS .d.cts types for require consumers](https://github.com/googleapis/js-genai/pull/1834) |

@@ -255,7 +255,7 @@ ${table(merged)}
 
 ### In review
 
-${table(open, (p) => (p.reviewDecision === 'APPROVED' ? ', approved' : ''))}
+${table(open, (p) => p.url === 'https://github.com/firecrawl/firecrawl/pull/4263' ? ' ([continued upstream](https://github.com/firecrawl/firecrawl/pull/5923))' : '')}
 <!-- oss:end -->`
 
 writeFileSync('assets/hero.svg', hero())
